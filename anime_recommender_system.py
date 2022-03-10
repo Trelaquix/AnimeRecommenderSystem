@@ -76,11 +76,11 @@ def getSimilarTitles(rowNo,df):
     csResultL = []
     
     # rowNoVec = df.loc[rowNo, 'Fantasy':].values
-    rowNoVec = df.iloc[rowNo, 13:]
+    rowNoVec = df.iloc[rowNo, 11:]
 
     for i in range(spaceSize):
         # iVec = df.loc[i, 'Fantasy':].values
-        iVec = df.iloc[i, 13:]
+        iVec = df.iloc[i, 11:]
         # cosine similarity calculation
         csResultL.append(np.dot(rowNoVec, iVec) / (np.linalg.norm(rowNoVec) * np.linalg.norm(iVec)))
         csIndexL.append(i)
